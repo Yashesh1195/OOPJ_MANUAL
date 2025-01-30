@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Practical_1_4{
+public class Practical_1_4 {
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the number(in metres) = ");
