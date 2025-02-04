@@ -12,7 +12,6 @@ public class Practical_1_10 {
         System.out.print("Enter length of side c  : ");
         double c = sc.nextDouble();
 
-
         if( a + b > c && a + c > b && b + c > a)
         {
             double s = (double) (a+b+c)/2;
