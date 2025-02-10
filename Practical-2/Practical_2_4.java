@@ -59,8 +59,9 @@ public class Practical_2_4 {
             default:
                 System.out.println("Invalid choice!");
                 return;
-        }
+            }
         printMatrix(result);
+        sc.close();
     }
 
     public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
