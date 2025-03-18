@@ -1,5 +1,46 @@
 import java.util.Scanner;
 public class Practical_2_4 {
+    public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
+        int[][] result = new int[3][3];
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                result[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+        return result;
+    }
+
+    public static int[][] subtractMatrices(int[][] matrix1, int[][] matrix2) {
+        int[][] result = new int[3][3];
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                result[i][j] = matrix1[i][j] - matrix2[i][j];
+            }
+        }
+        return result;
+    }
+
+    public static int[][] multiplyMatrices(int[][] matrix1, int[][] matrix2) {
+        int[][] result = new int[3][3];
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                result[i][j] = 0;
+                for (int k = 0; k < 3; k++) {
+                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+        return result;
+    }
+
+    public static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int[][] matrix1 = new int[3][3];
@@ -58,51 +99,9 @@ public class Practical_2_4 {
                 break;
             default:
                 System.out.println("Invalid choice!");
-                return;
+                break;
             }
         printMatrix(result);
         sc.close();
-    }
-
-    public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
-        int[][] result = new int[3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                result[i][j] = matrix1[i][j] + matrix2[i][j];
-            }
-        }
-        return result;
-    }
-
-    public static int[][] subtractMatrices(int[][] matrix1, int[][] matrix2) {
-        int[][] result = new int[3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                result[i][j] = matrix1[i][j] - matrix2[i][j];
-            }
-        }
-        return result;
-    }
-
-    public static int[][] multiplyMatrices(int[][] matrix1, int[][] matrix2) {
-        int[][] result = new int[3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                result[i][j] = 0;
-                for (int k = 0; k < 3; k++) {
-                    result[i][j] += matrix1[i][k] * matrix2[k][j];
-                }
-            }
-        }
-        return result;
-    }
-
-    public static void printMatrix(int[][] matrix) {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
     }
 }
